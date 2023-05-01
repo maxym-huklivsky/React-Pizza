@@ -1,0 +1,48 @@
+@import '../../scss/variables';
+
+.root {
+  justify-content: center;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 36px;
+  font-size: 18px;
+
+  :global {
+    .page-link {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      border: 1px solid $orange;
+      border-radius: 50%;
+      min-width: 40px;
+      min-height: 40px;
+      text-decoration: none;
+      color: $orange;
+      transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+    }
+
+    a.page-link:hover {
+      background-color: $orange;
+      color: #fff;
+
+      span {
+        color: #fff;
+      }
+    }
+
+    span {
+      color: $orange;
+    }
+
+    .page-item.active .page-link {
+      color: #ffffff;
+      background-color: $orange;
+    }
+
+    .page-item.disabled .page-link {
+      background-color: #cccccc;
+    }
+  }
+}
